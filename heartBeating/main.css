@@ -1,0 +1,33 @@
+.heart {
+	height: 40px;
+	width: 40px;
+	transform: rotate(45deg);
+	background-color: red;
+	margin: 20px auto;
+	animation-duration: 0.9s;
+	animation-name: beat;
+	animation-iteration-count: infinite;
+}
+.heart:before, 
+.heart:after {
+	content: "";
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	right: 20px;
+	border-radius: 50%;
+	background-color: red;
+}
+.heart:after {
+	top: -20px;
+  	left: 0;
+}
+
+@keyframes beat {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0.2;
+	}
+}
